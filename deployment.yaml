@@ -15,5 +15,10 @@ spec:
       containers:
       - name: web-server
         image: nginx:latest
+
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
         ports:
         - containerPort: 80
