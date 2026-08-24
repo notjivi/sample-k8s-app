@@ -17,3 +17,7 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+
+metadata:
+  annotations:
+    healnexus/status: pending_review
